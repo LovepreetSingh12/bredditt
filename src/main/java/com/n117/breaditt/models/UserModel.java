@@ -7,55 +7,82 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class UserModel {
 
     @Id
-    public String UserId;
-    public String UserName;
-    public String Name;
-    public String About;
-    public int Age;
-    public String Email;
-    public String PhoneNumber;
+    private String userId;
+    private String userName;
+    private String name;
+    private String about;
+    private int age;
+    private String email;
+    private String phoneNumber;
 
     //constructors
     public UserModel() {
 
     }
-    public UserModel(String name, String about, int age, String email, String phoneNumber) {
-        Name = name;
-        About = about;
-        Age = age;
-        Email = email;
-        PhoneNumber = phoneNumber;
+    public UserModel(String userId, String userName, String name, String about, int age, String email, String phoneNumber) {
+        this.userId = userId;
+        this.userName = userName;
+        this.name = name;
+        this.about = about;
+        this.age = age;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
     }
 
     //Getter-Setters
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public String getName() {
-        return Name;
+        return name;
     }
+
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
+
     public String getAbout() {
-        return About;
+        return about;
     }
+
     public void setAbout(String about) {
-        About = about;
+        this.about = about;
     }
+
     public int getAge() {
-        return Age;
+        return age;
     }
+
     public void setAge(int age) {
-        Age = age;
+        this.age = age;
     }
+
     public String getEmail() {
-        return Email;
+        return email;
     }
+
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
+
     public String getPhoneNumber() {
-        return PhoneNumber;
+        return phoneNumber;
     }
+
     public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
+        this.phoneNumber = phoneNumber;
     }
 }
