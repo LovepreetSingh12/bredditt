@@ -23,3 +23,16 @@ Breaditt is a feature-rich social media application that serves as a clone of th
 ```bash
 git clone https://github.com/username/breaditt.git
 cd breaditt
+```
+### 2. Configure Database
+- Ensure MongoDB is installed and running.
+- Update **application.properties** or **application.yml** with your MongoDB configuration:
+```bash
+spring.data.mongodb.uri=mongodb://localhost:27017/breaditt
+```
+### 3. Build and Run the Application
+```bash
+./mvnw spring-boot:run
+```
+### 4. Access the Application
+Open your browser and navigate to **http://localhost:92**
