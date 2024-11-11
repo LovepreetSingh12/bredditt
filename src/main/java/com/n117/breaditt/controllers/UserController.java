@@ -2,9 +2,7 @@ package com.n117.breaditt.controllers;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.n117.breaditt.models.UserModel;
 import com.n117.breaditt.services.UserService;
@@ -20,8 +18,15 @@ public class UserController {
         this.userService = userService;
     }
 
+    // Fetching all Users
     @GetMapping("/all")
     public List<UserModel> getAllUsers() {
         return userService.getAllUsers();
+    }
+
+    // Saving a new User
+    @PostMapping("/create")
+    public UserModel saveUser(@RequestBody UserModel user) {
+        return userService.createUser(user);
     }
 }
