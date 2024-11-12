@@ -1,15 +1,15 @@
 package com.n117.breaditt.models;
 
-import java.util.List;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "usersavedcomment")
-public class UserSavedComment {
+import java.util.List;
+
+@Document(collection = "usersavedposts")
+public class UserSavedPost {
 
     @Id
     private String id;
     private String userId;
-    private List<SavedObjectPairModel> savedCommentId;
+    private List<SavedObjectPairModel> savedPostId;
 }

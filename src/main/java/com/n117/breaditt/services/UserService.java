@@ -18,6 +18,7 @@ public class UserService {
     private UserRepository userRepository;
     private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
+    // Fetching all Users
     public List<UserModel> getAllUsers() {
         List<UserModel> res = new ArrayList<>();
         try {
@@ -28,5 +29,17 @@ public class UserService {
             logger.error("Error Fetching all users from Mongodb: ", e);
         }
         return res;
+    }
+
+    // Save a new user
+    public UserModel createUser(UserModel user) {
+        try {
+            UserModel savedUser = userRepository.save(user); // TODO : savedUser = user?
+            logger.info("User saved: " + savedUser.getUserId());
+            return savedUser;
+        } catch (Exception e) {
+            logger.error("Error saving user to MongoDB: ", e);
+            return null;
+        }
     }
 }

@@ -13,20 +13,16 @@ public class UserModel {
     private String userName;
     private String name;
     private String about;
-    private Integer age; // TODO : Integer or int?
+    private int age;
     private String email;
-    private String phoneNumber; // TODO : String or int? (to include international codes like +34)?
+    private String phoneNumber;
     private String profilePictureUrl;
-    private List<String> createdPosts;
-    private List<String> savedPosts;
-    private List<String> createdComments;
-    private List<String> savedComments;
     private List<String> socialMediaLinks;
     private List<String> subredditsJoined;
     private List<String> blockedUsers;
 
     // Constructor
-    public UserModel(String userId, String userName, String name, String about, Integer age, String email, String phoneNumber, String profilePictureUrl, List<String> savedPosts, List<String> createdPosts, List<String> createdComments, List<String> savedComments, List<String> socialMediaLinks, List<String> subredditsJoined, List<String> blockedUsers) {
+    public UserModel(String userId, String userName, String name, String about, Integer age, String email, String phoneNumber, String profilePictureUrl, List<String> socialMediaLinks, List<String> subredditsJoined, List<String> blockedUsers) {
         this.userId = userId;
         this.userName = userName;
         this.name = name;
@@ -35,10 +31,6 @@ public class UserModel {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.profilePictureUrl = profilePictureUrl;
-        this.savedPosts = savedPosts;
-        this.createdPosts = createdPosts;
-        this.createdComments = createdComments;
-        this.savedComments = savedComments;
         this.socialMediaLinks = socialMediaLinks;
         this.subredditsJoined = subredditsJoined;
         this.blockedUsers = blockedUsers;
@@ -107,38 +99,6 @@ public class UserModel {
 
     public void setProfilePictureUrl(String profilePictureUrl) {
         this.profilePictureUrl = profilePictureUrl;
-    }
-
-    public List<String> getCreatedPosts() {
-        return createdPosts;
-    }
-
-    public void setCreatedPosts(List<String> createdPosts) {
-        this.createdPosts = createdPosts;
-    }
-
-    public List<String> getSavedPosts() {
-        return savedPosts;
-    }
-
-    public void setSavedPosts(List<String> savedPosts) {
-        this.savedPosts = savedPosts;
-    }
-
-    public List<String> getCreatedComments() {
-        return createdComments;
-    }
-
-    public void setCreatedComments(List<String> createdComments) {
-        this.createdComments = createdComments;
-    }
-
-    public List<String> getSavedComments() {
-        return savedComments;
-    }
-
-    public void setSavedComments(List<String> savedComments) {
-        this.savedComments = savedComments;
     }
 
     public List<String> getSocialMediaLinks() {
