@@ -14,6 +14,11 @@ public class SubRedditUserRoleModel {
     private String userId;
     private Roles role;
     
+    public SubRedditUserRoleModel(String subRedditId, String userId, Roles role) {
+        this.subRedditId = subRedditId;
+        this.userId = userId;
+        this.role = role;
+    }
     public String getId() {
         return id;
     }

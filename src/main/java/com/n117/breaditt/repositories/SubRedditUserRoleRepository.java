@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import com.n117.breaditt.models.SubRedditUserRoleModel;
 
 public interface SubRedditUserRoleRepository extends MongoRepository<SubRedditUserRoleModel, String> {
-    Optional<SubRedditUserRoleModel> findBySubredditIdAndUserId(String subredditId, String userId);
-    List<SubRedditUserRoleModel> findAllBySubredditId(String subredditId);
+    Optional<SubRedditUserRoleModel> findBySubRedditIdAndUserId(String subredditId, String userId);
+    List<SubRedditUserRoleModel> findAllBySubRedditId(String subredditId);
     List<SubRedditUserRoleModel> findAllByUserId(String userId);   
 }
