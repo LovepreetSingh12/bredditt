@@ -18,11 +18,10 @@ public class UserModel {
     private String phoneNumber;
     private String profilePictureUrl;
     private List<String> socialMediaLinks;
-    private List<String> subredditsJoined;
     private List<String> blockedUsers;
 
     // Constructor
-    public UserModel(String userId, String userName, String name, String about, Integer age, String email, String phoneNumber, String profilePictureUrl, List<String> socialMediaLinks, List<String> subredditsJoined, List<String> blockedUsers) {
+    public UserModel(String userId, String userName, String name, String about, Integer age, String email, String phoneNumber, String profilePictureUrl, List<String> socialMediaLinks, List<String> blockedUsers) {
         this.userId = userId;
         this.userName = userName;
         this.name = name;
@@ -32,7 +31,6 @@ public class UserModel {
         this.phoneNumber = phoneNumber;
         this.profilePictureUrl = profilePictureUrl;
         this.socialMediaLinks = socialMediaLinks;
-        this.subredditsJoined = subredditsJoined;
         this.blockedUsers = blockedUsers;
     }
 
@@ -108,15 +106,6 @@ public class UserModel {
     public void setSocialMediaLinks(List<String> socialMediaLinks) {
         this.socialMediaLinks = socialMediaLinks;
     }
-
-    public List<String> getSubredditsJoined() {
-        return subredditsJoined;
-    }
-
-    public void setSubredditsJoined(List<String> subredditsJoined) {
-        this.subredditsJoined = subredditsJoined;
-    }
-
     public List<String> getBlockedUsers() {
         return blockedUsers;
     }
